@@ -1,4 +1,4 @@
-import string 
+import string
 import random 
 import re
 
@@ -15,7 +15,7 @@ def prompt():
     password = generate_password(size)
     
     with open('passwords.bin', 'ab') as f:
-        f.write((website + '-' + password + "\n").encode())
+        f.write((website + '-' + password + "\n").encode()) # encode is used for binary string formatting
 
 def readlines():
     master_pass = input("Please input masterpassword: ")
