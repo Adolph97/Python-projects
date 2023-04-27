@@ -11,11 +11,9 @@ while player1_wins < 2 and computer_wins < 2:
 	player1=input("please enter player1's move: ").title()
 	if player1 == "Exit":
 		break
-	# try:
-		
-	# except ValueError:
-	# 	print("please type a valid move")
+	
 	computer=random.randint(0,2)
+	# Rules for the game
 	if computer == 0:
 		computer = "Rock"
 		print("Rock")

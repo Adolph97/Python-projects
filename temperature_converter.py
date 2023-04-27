@@ -1,11 +1,13 @@
+# function for converting degree celsius to degree fahrenheit
 def tempF(degC):
-	degF = (degC*9/5)+32
-	print(degF) 
+	degF = round((degC*9/5)+32,2)
+	print(degF,"℉") 
 	pass
 
+# function for converting degree fahrenheit to degree celsius
 def tempC(degF):
-	degC = (degF-32)*5/9
-	print(degC) 
+	degC = round((degF-32)*5/9,2)
+	print(degC,"℃") 
 
 def temp():
 	print("please insert the type of conversion you would like to make")
@@ -19,7 +21,7 @@ def temp():
 			if degC == str("exit"):
 				temp()
 			else:
-				tempF(int(degC))
+				tempF(float(degC))
 
 		elif number == 2:
 			print("please insert the temperature in DegreeF or type exit to go back to the main menu")
@@ -27,7 +29,9 @@ def temp():
 			if degF == str("exit"):
 				temp()
 			else:
-				tempC(int(degF))
+				tempC(float(degF))
 
 	exit()
-temp()
+
+if __name__ == "__main__":
+	temp()

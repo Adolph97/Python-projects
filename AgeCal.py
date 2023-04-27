@@ -1,3 +1,4 @@
+from datetime import datetime, date
 def moreAge():
 	currentTime = datetime.now()
 	totalDays = currentTime - date_of_birth
@@ -21,14 +22,16 @@ def moreAge():
 
 	print("You are {} years old, {} months, {} days, {} hours, {} minutes, {} seconds old".format(yearsInt,monthsInt,daysInt,hoursInt,minutesInt,secondsInt))
 
+# variables to hold the names of the user.
 FName = input("Please type your first name: ")
 LName = input("Please type your last name: ")
 print("Hello",FName,LName)
-# age = input("What's your age in years? ")
-from datetime import datetime, date
+
+# date formatting
 print("Your date of birth (dd mm yyyy)")
 date_of_birth = datetime.strptime(input("--->"), "%d %m %Y")
 
+# year calculation
 def calc_age(born):
 	today = date.today()
 	return today.year - born.year 
